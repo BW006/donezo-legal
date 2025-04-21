@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donezo Privacy Policy</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+        }
+        h1, h2 {
+            color: #007AFF;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .back {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #007AFF;
+            text-decoration: none;
+        }
+        .back:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back">← Back to Legal Documents</a>
+        <div id="content">
+            <!-- Your Privacy Policy content will go here -->
+        </div>
+    </div>
+    <script>
+        // Load the markdown content
+        fetch('PrivacyPolicy.md')
+            .then(response => response.text())
+            .then(text => {
+                document.getElementById('content').innerHTML = text;
+            });
+    </script>
+</body>
+</html>
